@@ -1,0 +1,162 @@
+/*limpando o.navegador antes*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*corpo*/
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #042831af, #15067ca4);
+    font-family: Arial;
+  }
+  
+  /*desenho da calcudora*/
+  .calculadora {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+  }
+  /*o modelo da calcudora*/
+  .modelo {
+    border-radius: 20px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f3334b3;
+    padding: 10px;
+    margin-bottom: 0; /* remova a margem inferior */
+  }
+  /*o display dentro do modelo*/
+  .display-container {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1px; /* adicione espaçamento superior */
+    padding: 10px;
+  }
+  /*o display onde parece os números*/
+  #display {
+      border-radius: 10px;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 0 5px #d9d9d9;
+    line-height: 0.5;
+    overflow-x: auto;
+  }
+  
+  /*os botões*/
+   button {
+    background-color: #f2f2f2;
+    color: #666;
+    width: 45px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #d9d9d9;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  /*efeito de clique dos operadores*/
+  .botao:hover, .operacao:hover {
+    background-color: #b7ecec;
+  }
+  .botao:active, .operacao:active{
+    background-color: #a8a8a8;
+  }
+  /*botão de limpar*/
+  #limpar, #igual {
+    font-size: 30px;
+    background-color: #ff6666;
+    color: #fff;
+    font-weight: 800;
+  }
+  /*Efeito do botão de limpar*/
+  #limpar:hover {
+    background-color: #db2c2c;
+  }
+  /*botão do igual*/
+  #igual {
+    background-color: #6ac259;
+  }
+  /*Efeito do botão de igual*/
+  #igual:hover {
+    background-color: #54e73a;
+  }
+  /* Estilizando a mensagem de erro */
+  #erro {
+    opacity: 0;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0000004d;
+    animation-name: none;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  /* Colocando o nome da animação de entrada */
+  #erro.fade-in {
+    animation-name: fade-in;
+    /*animation-play-state: running;*/
+    animation-duration: 0.5s;
+  }
+  /* Colocando o nome da animação de saída */
+  #erro.fade-out {
+    animation-name: fade-out;
+    /*animation-play-state: paused;*/
+    animation-duration: 1s;
+  }
+  /*Animação de entrada*/
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  /*Animação de saída*/
+  @keyframes fade-out {
+    100% {
+      opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    0% {
+      opacity: 1;
+    }
+  }
+  /*rodape*/
+  footer, footer a{
+      text-align: center;
+  font-style: italic;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  }
+  footer a{
+    color: rgb(223, 208, 208);
+  }
+  footer a:hover{
+    color: gray;
+  }
